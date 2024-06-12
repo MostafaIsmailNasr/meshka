@@ -1,0 +1,18 @@
+class UpdateCartResponse {
+  bool? success;
+  String? message;
+
+  UpdateCartResponse({this.success, this.message});
+
+  UpdateCartResponse.fromJson(Map<String, dynamic> json) {
+    success = json['success'];
+    message = json['message'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['success'] = this.success;
+    data['message'] = this.message;
+    return data;
+  }
+}
